@@ -1,23 +1,35 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
- * main - start of the programme
- * prints all different combination of two numbers
- * Return: 0(Success)
+ * main - program that prints numbers from 0 to 99 without figure repeat.
+ * Return: 0
  */
+
 int main(void)
 {
-int i, j;
-for (i = 0 ; i < 9 ; i++)
-for (j = i + '1' ; j < 10 ; j++)
-{
-	putchar (i + '0');
-	putchar (j + '0');
-}
-if (i < 8 || j < 9)
-{
-	putchar (',');
-	putchar (' ');
-}
-putchar('\n');
-return (0);
+	int i, j;
+
+	i = 0;
+	j = 0;
+
+	while (i < 9)
+	{
+		j = i + 1;
+		while (j < 10)
+		{
+			putchar('0' + i);
+			putchar('0' + j);
+
+			if (i < 8 || j < 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			j++;
+		}
+		++i;
+	}
+
+	putchar('\n');
+
+	return (0);
 }
