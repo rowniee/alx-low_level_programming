@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, c, i;
+	unsigned int a = 1, b = 2, c, i;
 
-	printf("%d, %d, ", a, b);
+	printf("%u, %u, ", a, b);
 	for (i = 3 ; i <= 50 ; i++)
 	{
 		c = a + b;
-		printf("%d, ", c);
+		printf("%u, ", c);
 		a = b;
 		b = c;
 	}
