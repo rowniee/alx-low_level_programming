@@ -1,4 +1,4 @@
-include <stdlib.h>
+#include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
 /**
@@ -31,4 +31,3 @@ else
 }
 return (0);
 }
-
