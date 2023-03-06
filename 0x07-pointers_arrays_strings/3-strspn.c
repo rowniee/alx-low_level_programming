@@ -1,28 +1,29 @@
 #include "main.h"
 /**
- * _strspn - beginning of the function
- * @s: string to be searchd
- * @accept: character containg the bytes
- * Return: integer
+ * _strspn - beginning of the programme
+ * @s: number of bytes to be returned
+ * @accept: bytes to be checked
+ * Return: character
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0;
-    int found;
+	unsigned int num;
+	int i, j, t;
 
-    while (*s != '\0') {
-        found = 0;
-        for (char *p = accept; *p != '\0'; p++) {
-            if (*s == *p) {
-                found = 1;
-                break;
-            }
-        }
-        if (found == 0) {
-            return count;
-        }
-        s++;
-        count++;
-    }
-    return count;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		t = 0;
+		for (j = 0; accept[j] != '\0'; j++)
+		{
+			if (s[i] == accept[j])
+				t = 1;
+		}
+		j = 0;
+		if (t == 0)
+			break;
+		num++;
+		i++;
+	}
+	return (i);
 }
