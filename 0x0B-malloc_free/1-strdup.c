@@ -3,7 +3,7 @@
 /**
  * _strdup - returns a pointer to the newly allocated space
  * @str: string to be duplicated
- * Returns: a pointer to the duplicated string
+ * Return: a pointer to the duplicated string
  */
 char *_strdup(char *str)
 {
@@ -12,7 +12,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	for (i = 0;str[i] ;i++)
+	for (i = 0; str[i] ; i++)
 		l++;
 	dup = malloc(sizeof(char) * (l + 1));
 
